@@ -1,5 +1,6 @@
 # Click-Vet
 AUTHOR: Edwin Kahugu
+
 Click-Vet is an application designed to solve problems faced by small scale livestock farmers in Kenya in accessing Veteriary services. Coming from a background where my grandparents keep animals, I have witnessed the issues that come about when the services of a veterinarian are needed.
 Most small scale livestock farmers have to call individual government veterinary officers to get their services. This poses a problem when the veterinary officer is working in a different area which is far away. This means the veterinary officer, has to travel a long way to a farmer who may have been served by a veterinarian available within their area. This would have saved the government money used to fuel the veterinary’s motorcycle, and time to reach a farmer which would save the life of an animal if it is an emergency.
 Sometimes after calling a veterinarian, they say they will come on a particular day, but they fail to appear which can lead to the loss of life to an animal if it was an emergency situation which is a huge loss to a farmer. This project aims to bring accountability by allowing farmers to lodge a complaint against a veterinarian assigned to help them.
