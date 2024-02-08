@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<div class="posts-list row">
+    <div class="card mt-2 col-md-4 bg-light" id="first_card">
+        <div class="card-body">
+            <h5 class="card-title">Total Requests</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Date: Current Month</h6>
+            <p class="card-text">No. of Requests</p>
+        </div> 
+    </div>
+
+    <div class="card mt-2 col-md-4 bg-light" id="third_card">
+        <div class="card-body">
+            <h5 class="card-title">Highest Vet Requests</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Date: Current Month</h6>
+            <p class="card-text">Region:</p>
+        </div> 
+    </div>
+</div>
+<div class='tile'>
+    <section class="section">
+        <div class="columns mt-4">
+            <h3>Pending Diagnosis</h3>
+            <table class="table is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Phone No.</th>
+                        <th>Location</th>
+                        <th>Veterinarian Id</th>
+                        <th>Diagnosis</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+        
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<section class="section">
+    <div class="container ml-4 mt-5">
+        <h2>Update Diagnosis</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <form class="add-post-form">
+                    <div class="form-group">
+                        <label for="title">Request Id</label>
+                        <input type="text class=form-control" id="id-value">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Assigned Vet</label>
+                        <input type="text class=form-control" id="id-value">
+                    </div>    
+                    <div class="form-group">
+                        <label for="body">Diagnosis</label>
+                        <textarea class="form-control" id="body-value"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Update Diagnosis</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
