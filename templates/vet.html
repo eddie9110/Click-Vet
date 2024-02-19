@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='tile'>
+    <section class="section">
+        <div class="columns mt-4">
+            <h3>Vets information</h3>
+            <table class="table is-fullwidth table-striped" id="table2">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Phone No.</th>
+                        <th>Location</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                    {% for vet in vets.items %}
+                    <tr>
+                        <td>{{ vet.id }}</td>
+                        <td>{{ vet.username }}</td>
+                        <td>{{ vet.phone_no }}</td>
+                        <td>{{ vet.location }}</td>
+                        <td><a class="btn btn-secondary btn-sm" href="{{ url_for('update_vet', vet_id=vet.id)}}"
+                            onclick="return confirm('Do you want to update {{ vet.id }}?');" title="Update Vet's Details">
+                            <i class="material-icons" style="font-size:16px">Update</i></a></td>
+                    </tr>
+                    {% endfor %}
+                    {% for page_num in vets.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                        {% if page_num %}
+                            {% if vets.page == page_num %}
+                                <a class="btn btn-info" href="{{ url_for('vets_info', page=page_num) }}">{{ page_num }}</a>
+                            {% else %}
+                                <a class="btn btn-outline-info" href="{{ url_for('vets_info', page=page_num) }}">{{ page_num }}</a>
+                            {% endif %}
+                        {% else %}
+                            ...
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a class="btn btn-primary btn-sm" href="{{ url_for('create_vet')}}">Add new vet</a>
+        </div>
+    </section>
+</div>
+<br>
+<br>
+<br>
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<div class="posts-list row">
+    <div class="card mt-2 col-md-4 bg-light" id="first_card">
+        <div class="card-body">
+            <h5 class="card-title">Total Requests</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Date: Current Month</h6>
+            <p class="card-text">{{ card1 }}</p>
+        </div>
+    </div>
+    <div class="card mt-2 col-md-4 bg-light" id="first_card">
+        <div class="card-body">
+            <h5 class="card-title">Most Common Diagnosis</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Date: Current Month</h6>
+            <p class="card-text">{{ card2[0][0] }} - {{ card2[0][1] }}</p>
+        </div>
+    </div>
+    <div class="card mt-2 col-md-4 bg-light" id="first_card">
+        <div class="card-body">
+            <h5 class="card-title">Location with most Requests</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Date: Current Month</h6>
+            <p class="card-text">{{ card3 }}</p>
+        </div>
+    </div>
+</div>
+<div class='tile'>
+    <section class="section">
+        <div class="columns mt-4">
+            <h3>Most common diagnosis</h3>
+            <table class="table is-fullwidth table-striped">
+                <thead>
+                    <tr>
+                        <th>Location</th> 
+                        <th>Diagnosis</th>
+                        <th>Number of Cases</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                    {% for row in data %}
+                    <tr>
+                        {% for cell in row %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='tile'>
+    <section class="section">
+        <div class="columns mt-4">
+            <h3>Pending Diagnosis</h3>
+            <table class="table is-fullwidth table-striped" id="table2">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Phone No.</th>
+                        <th>Location</th>
+                        <th>Veterinarian Id</th>
+                        <th>Diagnosis</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                    {% for request in requests.items %}
+                    <tr>
+                        <td>{{ request.id }}</td>
+                        <td>{{ request.date_created.strftime('%Y-%m-%d') }}</td>
+                        <td>{{ request.phone_no }}</td>
+                        <td>{{ request.location }}</td>
+                        <td>{{ request.vet_id }}</td>
+                        <td>pending</td>
+                        <td><a class="btn btn-secondary btn-sm" href="{{ url_for('update_diagnosis', request_id=request.id)}}"
+                            onclick="return confirm('Do you want to update request {{ request.id }}?');" title="Update Diagnosis">
+                            <i>Update</i></a></td>
+                        <td><a class="btn btn-danger btn-sm m-1" href="{{ url_for('delete_request', request_id=request.id)}}"
+                            onclick="return confirm('Do you want to delete request{{ request.id }}?');" title="Delete Request">
+                            <i>Delete</i></a></td>
+                    </tr>
+                    {% endfor %}
+                    {% for page_num in requests.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                        {% if page_num %}
+                            {% if requests.page == page_num %}
+                                <a class="btn btn-info" href="{{ url_for('update_info', page=page_num) }}">{{ page_num }}</a>
+                            {% else %}
+                                <a class="btn btn-outline-info" href="{{ url_for('update_info', page=page_num) }}">{{ page_num }}</a>
+                            {% endif %}
+                        {% else %}
+                            ...
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}
