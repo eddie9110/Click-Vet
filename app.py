@@ -8,9 +8,6 @@ from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 username = "sandbox"
-#api_key = "7f1d73232127999fd52e5cc14541b6ceee53b6b3fae2fb1a44952e6e64d13ac3"
-#africastalking.initialize(username, api_key)
-#sms = africastalking.SMS
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
