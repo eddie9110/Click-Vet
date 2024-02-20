@@ -1,3 +1,4 @@
+![Banner](https://github.com/eddie9110/Click-Vet/assets/125439183/77011583-88e1-41da-a832-05902126d4a7)
 # Click-Vet
 AUTHOR: Edwin Kahugu
 
