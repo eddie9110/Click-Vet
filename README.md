@@ -15,3 +15,10 @@ As a result of the above problem, I came up with a solution in the form of this 
 
 . An app that can be used by county governments to monitor the diagnosis given by veterinarians in different areas within a county which will be saved in a database. This information can be useful in taking action when a trend of an infectious livestock disease is spotted in a particular part of the county, monitoring areas where there is low uptake of veterinary services so as to educate livestock farmers on the benefit of using veterinarians e.t.c.
 
+For an extensive explanation of this project, visit my blog post https://edwinkahugu.hashnode.dev/click-vet
+
+USAGE
+You can clone this into your local machine to customise it according to your needs, but first you need to:
+. create an Africa's talking account to have access to a simulator
+. install ngrok on your local machine to expose your local host to the internet
+. upload the ngrok url of your app to your africas talking account to allow the USSD app to communicate with your application
