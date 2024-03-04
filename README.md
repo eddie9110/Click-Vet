@@ -7,8 +7,6 @@
 - Blog Post: https://edwinkahugu.hashnode.dev/click-vet
 
 ## Installation & usage
-This project is licensed under the MIT software license
-You can clone this into your local machine to customise it according to your needs, but first you need to:
 - create an Africa's talking account to have access to a mobile phone simulator
 - install ngrok on your local machine to expose your local host to the internet
 - upload the ngrok url of your app to your africas talking account to allow the USSD app to communicate with your application
