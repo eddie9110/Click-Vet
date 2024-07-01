@@ -4,7 +4,7 @@ import os
 import random
 
 username = "sandbox"
-api_key = "you API key goes here"
+api_key = "AFRICAS_TALKING_API_KEY"
 africastalking.initialize(username, api_key)
 sms = africastalking.SMS
 
